@@ -27,9 +27,9 @@ function playerDown()//아무 조작도 없을때 플레이어는 떨어진다.
 }
 function IsGameOver()//플레이어가 화면의 바닥이나 천장에 닿았을때 false반환
 {
-    if(playerPos[1]-r<=250)
+    if(playerPos[1]-r<=0)
         return true;
-    if(playerPos[1]+r>=799)
+    if(playerPos[1]+r>=500)
         return true;
 
         return false;
