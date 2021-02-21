@@ -2,7 +2,13 @@
 let playerPos= [];//플레이어의 중점
 let r = 20;//캐릭터는 반지름이 20px인 원으로 그려진다.
 
+let score=0;
 //const __player = {};
+
+function addScore()//스코어 증가
+{
+    score++;
+}
 
 function playerStart()
 {
@@ -13,6 +19,7 @@ function playerStart()
 function playerUp()//위쪽 방향키 눌렀을 때
 {
     playerPos[1]+=1;
+    
 }
 function playerDown()//아무 조작도 없을때 플레이어는 떨어진다.
 {
