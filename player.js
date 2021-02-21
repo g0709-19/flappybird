@@ -13,7 +13,7 @@ function addScore()//스코어 증가
 function playerStart()
 {
     playerPos[0]=250;
-    playerPos[1]=400;
+    playerPos[1]=250;
 }
 
 function playerUp()//위쪽 방향키 눌렀을 때
@@ -27,12 +27,12 @@ function playerDown()//아무 조작도 없을때 플레이어는 떨어진다.
 }
 function IsGameOver()//플레이어가 화면의 바닥이나 천장에 닿았을때 false반환
 {
-    if(playerPos[1]-r<=0)
-        return false;
-    if(playerPos[1]+r>=799)
-        return false;
-
+    if(playerPos[1]-r<=250)
         return true;
+    if(playerPos[1]+r>=799)
+        return true;
+
+        return false;
 }
 function GetplayerPos()//플레이어 위치 반환
 {
