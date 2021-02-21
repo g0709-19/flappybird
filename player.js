@@ -18,12 +18,12 @@ function playerStart()
 
 function playerUp()//위쪽 방향키 눌렀을 때
 {
-    playerPos[1]+=1;
+    playerPos[1]-=2;
     
 }
 function playerDown()//아무 조작도 없을때 플레이어는 떨어진다.
 {
-    playerPos[1]-=1;
+    playerPos[1]+=2;
 }
 function IsGameOver()//플레이어가 화면의 바닥이나 천장에 닿았을때 false반환
 {
