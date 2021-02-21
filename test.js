@@ -4,11 +4,12 @@
 document.addEventListener('keydown',(e)=>{
     const keycode = e.keyCode;
 console.log('hi');
-    if(keycode ==38)//위쪽
+isKeyDown=true;    
+if(keycode ==38)//위쪽
     {
         playerUp();
     }
-    if(keycode==40)
+    if(keycode ==40)//위쪽
     {
         playerDown();
     }
@@ -19,23 +20,22 @@ console.log('hi');
 })
 
 function draw(){
-    
-    playerStart();
     var canvas = document.getElementById('tutorial');
     if (canvas.getContext){
+
         var ctx = canvas.getContext('2d');
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.clearRect(0, 0, 500, 800);
+        ctx.beginPath();
         ctx.arc(playerPos[0], playerPos[1], GetRadius(), 0, 2 * Math.PI);
-        ctx.stroke();
+        ctx.fill();
+        ctx.restore();
+        
     }
+    
+    
 }
 
 function repeat(){
     playerStart();
-    while(1)
-    {
-        setInterval(draw, 1000);
-    }
+        setInterval(draw, 10);
 }
-
-draw();
