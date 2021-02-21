@@ -4,13 +4,14 @@
 
 
 function draw(){
+    
     playerStart();
     var canvas = document.getElementById('tutorial');
     if (canvas.getContext){
         var ctx = canvas.getContext('2d');
-        console.log(playerPos[0],playerPos[1]);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.arc(playerPos[0], playerPos[1], GetRadius(), 0, 2 * Math.PI);
-        ctx.stroke();   
+        ctx.stroke();
     }
 }
 
